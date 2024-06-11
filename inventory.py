@@ -30,7 +30,48 @@ def view():
         print(f"\tQuantity: {description['quantity']}")
 
 def update():
-    pass
+#    product = input("Kindly enter the name of the product you would like to update: ").lower()
+    
+#    for name, description in products.items():
+#        if name == product:
+#            print(f"The product {name.title()} is available with {description['quantity']} pieces available.")
+#            choice_one = input("Would you like to \n\t1.Add new products or \n\t2. Remove available products from current inventory\nPick a choice(1-2): ")
+#            if choice_one == "1":
+#                amount = input(f"Enter the amount you would like to add: ")
+#                new_quantity = {description["quantity"]} + amount
+#            elif choice_one == "2":
+#                amount = input(f"Enter the amount you would like to remove from the available inventory: ")
+#                if amount < {description["quantity"]}:
+#                    new_quantity = {description["quantity"]} - amount
+#                else:
+#                    print(f"The amount you input {amount} is higher than the amount ({description['quantity']})available.")
+#            else:
+#                print("Invalid choice")
+#        else:
+#            print(f"The item {product} is not available in the current inventory.")
+    product = input("\nKindly enter the name of the product you would like to update: ").lower()
+    
+    if product in products:
+        description = products[product]
+        print(f"\nThe product {product.title()} is available with {description['quantity']} pieces available.")
+        choice_one = input("Would you like to \n\t1. Add new products or \n\t2. Remove available products from current inventory\nPick a choice (1-2): ")
+        
+        if choice_one == "1":
+            amount = int(input("\nEnter the amount you would like to add: "))
+            products[product]['quantity'] += amount
+            print(f"\n{amount} items have been added to {product}. New quantity is {products[product]['quantity']}.")
+            
+        elif choice_one == "2":
+            amount = int(input("\nEnter the amount you would like to remove from the available inventory: "))
+            if amount <= products[product]['quantity']:
+                products[product]['quantity'] -= amount
+                print(f"\n{amount} items have been removed from {product}. New quantity is {products[product]['quantity']}.")
+            else:
+                print(f"\nThe amount you input ({amount}) is higher than the available amount ({description['quantity']}).")
+        else:
+            print("\nInvalid choice")
+    else:
+        print(f"\nThe item {product} is not available in the current inventory.")
 
 def delete():
     pass
@@ -38,14 +79,14 @@ def delete():
 
 is_running = True
 while is_running:
-    print("**********************************************************************************************************************************")
+    print("\n**********************************************************************************************************************************")
     print("Hello please choose one of the choices below to continue with the program.")
     print("\n\t1.View products")
     print("\n\t2.Update products")
     print("\n\t3.Delete products")
     print("\n\t4.Exit program")
     choice = input("\nKindly enter your choice(1-4): ")
-    print("**********************************************************************************************************************************")
+    print("\n**********************************************************************************************************************************")
     
     if choice == "1":
         view()
