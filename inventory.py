@@ -102,31 +102,35 @@ def delete():
     
     view()
 
-
-is_running = True
-while is_running:
-    print("\n**********************************************************************************************************************************")
-    print("Hello please choose one of the choices below to continue with the program.")
-    print("\n\t1.View products")
-    print("\n\t2.Update product details")
-    print("\n\t3.Add new product")
-    print("\n\t4.Delete product")
-    print("\n\t5.Exit program")
-    choice = input("\nKindly enter your choice(1-4): ")
-    print("\n**********************************************************************************************************************************")
+def main():
     
-    if choice == "1":
-        view()
-    elif choice == "2":
-        update()
-    elif choice == "3":
-        add()
-    elif choice == "4":
-        delete()
-    elif choice == "5":
-        is_running = False
-    else:
-        print("Please enter a valid choice (1-4)")
+    is_running = True
+    while is_running:
+        print("\n**********************************************************************************************************************************")
+        print("Hello please choose one of the choices below to continue with the program.")
+        print("\n\t1.View products")
+        print("\n\t2.Update product details")
+        print("\n\t3.Add new product")
+        print("\n\t4.Delete product")
+        print("\n\t5.Exit program")
+        choice = input("\nKindly enter your choice(1-4): ")
+        print("\n**********************************************************************************************************************************")
+        
+        if choice == "1":
+            view()
+        elif choice == "2":
+            update()
+        elif choice == "3":
+            add()
+        elif choice == "4":
+            delete()
+        elif choice == "5":
+            is_running = False
+        else:
+            print("Please enter a valid choice (1-4)")
+            
+if __name__ == '__main__':
+    main()            
         
 
 
