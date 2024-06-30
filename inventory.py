@@ -51,6 +51,7 @@ def update():
 #            print(f"The item {product} is not available in the current inventory.")
     product = input("\nKindly enter the name of the product you would like to update: ").lower()
     
+    
     if product in products:
         description = products[product]
         print(f"\nThe product {product.title()} is available with {description['quantity']} pieces available.")
@@ -72,6 +73,8 @@ def update():
             print("\nInvalid choice")
     else:
         print(f"\nThe item {product} is not available in the current inventory.")
+
+
 
 def add():
     new_name = input("Enter new product name: ")
@@ -101,6 +104,7 @@ def delete():
     print("\nHere is the updated product list.")
     
     view()
+
 
 def main():
     
