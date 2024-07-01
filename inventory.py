@@ -29,6 +29,8 @@ def view():
         print(f"\tPrice: {description['price']}")
         print(f"\tQuantity: {description['quantity']}")
 
+
+
 def update():
 #    product = input("Kindly enter the name of the product you would like to update: ").lower()
     
@@ -104,8 +106,8 @@ def delete():
     print("\nHere is the updated product list.")
     
     view()
-
-
+    
+    
 def main():
     
     is_running = True
@@ -132,6 +134,7 @@ def main():
             is_running = False
         else:
             print("Please enter a valid choice (1-4)")
+     
             
 if __name__ == '__main__':
     main()            
