@@ -31,25 +31,7 @@ def view():
 
 
 def update():
-#    product = input("Kindly enter the name of the product you would like to update: ").lower()
-    
-#    for name, description in products.items():
-#        if name == product:
-#            print(f"The product {name.title()} is available with {description['quantity']} pieces available.")
-#            choice_one = input("Would you like to \n\t1.Add new products or \n\t2. Remove available products from current inventory\nPick a choice(1-2): ")
-#            if choice_one == "1":
-#                amount = input(f"Enter the amount you would like to add: ")
-#                new_quantity = {description["quantity"]} + amount
-#            elif choice_one == "2":
-#                amount = input(f"Enter the amount you would like to remove from the available inventory: ")
-#                if amount < {description["quantity"]}:
-#                    new_quantity = {description["quantity"]} - amount
-#                else:
-#                    print(f"The amount you input {amount} is higher than the amount ({description['quantity']})available.")
-#            else:
-#                print("Invalid choice")
-#        else:
-#            print(f"The item {product} is not available in the current inventory.")
+
     product = input("\nKindly enter the name of the product you would like to update: ").lower()
     
     
