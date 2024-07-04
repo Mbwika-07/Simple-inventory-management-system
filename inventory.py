@@ -21,10 +21,6 @@ products = {
     }
 }
 
-
-
-
-
 def view():
     for name, description in products.items():
         print(f"\nProduct: {name.title()}")
