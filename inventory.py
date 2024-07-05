@@ -28,6 +28,8 @@ def view():
         print(f"\tQuantity: {description['quantity']}")
 
 
+
+
 def update():
 
     product = input("\nKindly enter the name of the product you would like to update: ").lower()
